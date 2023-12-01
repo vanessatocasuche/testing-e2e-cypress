@@ -6,6 +6,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "csv-loader": "^3.0.5",
     "cypress": "^13.6.0",
     "eslint-plugin-cypress": "^2.15.1"
   },
