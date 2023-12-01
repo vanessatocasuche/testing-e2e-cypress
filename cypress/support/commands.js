@@ -23,3 +23,21 @@
 //
 // -- This will overwrite an existing command --
 // Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+
+Cypress.Commands.add("iniciarSesion", (email, password) => {
+	// Arrange
+	cy.visit('https://opensource-demo.orangehrmlive.com/')
+
+	// Act
+	cy.get('input').eq(1).type(email)
+	cy.get('input').eq(2).type(password)
+	cy.get('button').click()
+	cy.wait(3000)
+
+	// Assert
+	cy.get('h6').should('contain', 'Dashboard')
+})
+
+Cypress.Commands.add('inputCommand', (selector) => {
+	return cy.get(`input[name=${selector}]`);
+});
