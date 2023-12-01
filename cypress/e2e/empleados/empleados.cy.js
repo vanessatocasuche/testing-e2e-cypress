@@ -1,4 +1,4 @@
-import { importData } from '../../fixtures/importData.csv'
+//import { importData } from '../../fixtures/importData.csv'
 
 /**
  * Característica: Creación Manual de Empleados
